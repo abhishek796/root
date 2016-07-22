@@ -1,0 +1,17 @@
+﻿<h3>PhoneBook</h3>
+<br />
+Select a build <select ng-model="selectedBuild">
+    <option ng-repeat="build in builds">{{build.Name}}</option>
+    </select>
+<br>
+<input class="input" type="text" ng-model="Count" placeholder="Number of builds" />
+<button class="btn btn-success" ng-click="addToList()" ng-disabled="!Name">Get Builds</button>
+<br /><br />
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Build Number</th>
+    </tr>
+    <tr ng-repeat="build in builds">
+        <td>{{build.Name}}</td>
+    </tr>
+</table>

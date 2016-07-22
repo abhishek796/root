@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My first app</title>
+    <link rel="stylesheet" href="Scripts/bootstrap.css" />
+</head>
+<body ng-app="TFSReportApp">
+    <header class="page-header">
+        <h1>Dashboard</h1>
+        <br />
+        <p style="font-size:30px; font-size: 2.5vw"> Hello</p>
+        <a href="#builds" class="btn btn-navbar">Builds</a>
+        <a href="#filters" class="btn btn-navbar">Search</a>
+    </header>
+    <main>
+        <div class="container" ng-controller="GetData">
+            <ng-view></ng-view>
+        </div>
+    </main>
+    <footer class="modal-footer">
+        <p>This App is solely for practise purpose</p>
+    </footer>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/MyController.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="app/directives/MyDirective.js"></script>
+</body>
+</html>

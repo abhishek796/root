@@ -1,0 +1,16 @@
+﻿<h3>Search</h3>
+<br />
+<input class="input" type="text" ng-model="Name" placeholder="First Name" />
+<button class="btn btn-primary" ng-click="filter(Name)" title="Search">Search</button>
+<br /><br />
+<table class="table table-bordered table-striped">
+    <tr>
+        <th><button class="btn-link" ng-click="sort('MyName')">Name</button></th>
+        <th><button class="btn-link" ng-click="sort('MyNumber')">Number</button></th>
+    </tr>
+    <tr ng-repeat="entry in list | orderBy:sortOrder | filter:filtername">
+        <td>{{entry.MyName}}</td>
+        <td>{{entry.MyNumber}}</td>
+        <td><button class="btn btn-mini" ng-click="remove($index)">&times;</button></td>
+    </tr>
+</table>
